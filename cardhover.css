@@ -26,27 +26,26 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 .card:hover {
   transform: translateY(30px);
 }
 
 .text {
-  position: relative;
   height: 100%;
   opacity: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: baseline;
+  background: linear-gradient(rgba(0, 100, 100, 0.882), rgba(129, 235, 15, 0.5));
 }
 
 .text:hover {
-  background: linear-gradient(rgba(0, 100, 100, 0.882), rgba(129, 235, 15, 0.5));
   opacity: 1;
 }
 
-.card h1, p {
+.card h1,
+p {
   margin: 10px;
 }
 
