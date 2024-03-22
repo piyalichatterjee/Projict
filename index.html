@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="circular-progress">
+            <div class="box">
+                <span class="progress-value">0%</span>
+
+            </div>
+        </div>
+        <span class="text">HTML & CSS</span>
+    </div>
+</body>
+<script>
+    let circularProgress = document.querySelector(".circular-progress")
+    console.log(circularProgress)
+    let progressValue = document.querySelector(".progress-value")
+    console.log(progressValue)
+    let progressStarValue = 0
+    let progressEndValue = 100
+    let speed = 100
+
+    let progress = setInterval(() => {
+        progressStarValue++
+        console.log(progressStarValue)
+        progressValue.textContent = progressStarValue + " % "
+        circularProgress.style.background = `conic-gradient(rgb(101, 48, 157)${progressStarValue * 3.6}deg,rgb(218, 218, 213)1deg)`
+        if (progressStarValue === progressEndValue) {
+            clearInterval(progress)
+        }
+    }, speed)
+</script>
+
+</html>
