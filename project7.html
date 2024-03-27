@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        background-color: rgb(78, 4, 101);
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .time {
+        /* border: 2px solid red; */
+    }
+
+    .digit {
+        font-size: 7rem;
+        font-weight: 600;
+        color: aliceblue;
+    }
+
+    .text {
+        font-size: 3rem;
+        color: aliceblue;
+    }
+
+    .btn-container {
+        margin: 10px;
+        /* border: 2px solid black; */
+    }
+
+    .btn {
+        padding: 10px 30px;
+        margin: 10px;
+        cursor: pointer;
+        border: none;
+        color: aliceblue;
+        font-size: 1.5rem;
+    }
+
+    #start {
+        background-color: aquamarine;
+    }
+
+    #stop {
+        background-color: rgb(235, 93, 93);
+    }
+
+    #reset {
+        background-color: blue;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="time">
+            <span class="digit" id="hr">00</span>
+            <span class="text">hr</span>
+            <span class="digit" id="min">00</span>
+            <span class="text">min</span>
+            <span class="digit" id="sec">00</span>
+            <span class="text">sec</span>
+            <span class="digit" id="count">00</span>
+        </div>
+        <div class="btn-container">
+            <button class="btn" id="start" onclick="start()">Start</button>
+            <button class="btn" id="stop" onclick="stop()">Stop</button>
+            <button class="btn" id="reset" onclick="reset()">Reset</button>
+        </div>
+    </div>
+</body>
+<script>
+
+    let hr = 0
+    let min = 0
+    let sec = 0
+    let count = 0
+
+    let timer = false
+    function start() {
+        timer = true
+        stopWatch()
+        // console.log(timer)
+        // console.log("hi")
+    }
+    function stop() {
+
+        timer = false
+        // console.log(timer)
+        // console.log("hi1")
+    }
+    function reset() {
+        timer = false
+        // console.log("hi2")
+        // console.log(timer)
+         hr = 0
+         min = 0
+         sec = 0
+         count = 0
+
+
+        document.getElementById("hr").textContent = "00"
+        document.getElementById("min").textContent = "00"
+        document.getElementById("sec").textContent = "00"
+        document.getElementById("count").textContent = "00"
+
+
+
+    }
+    function stopWatch() {
+        if (timer == true) {
+            count = count + 1
+
+            if (count == 100) {
+                sec = sec + 1
+                count = 0
+            }
+            if (sec == 60) {
+                min = min + 1
+                sec = 0
+            }
+            if (min == 60) {
+              hr = hr + 1
+                sec = 0
+                min = 0
+            }
+
+            let hrString = hr
+            console.log(hrString)
+            let minString = min
+            let secString = sec
+            let countString = count
+            // if (hr < 10) {
+            //     hrString = "0" + hrString
+            // }
+            // if (min < 10) {
+            //     minString = "0" + minString
+            // }
+            // if (sec < 10) {
+            //     secString = "0" + secString
+            // }
+            // if (count < 10) {
+            //     countString = "0" + countString
+            // }
+
+            if (hrString < 10) {
+                hrString = "0" + hrString
+            }
+            if (minString < 10) {
+                minString = "0" + minString
+            }
+            if (secString < 10) {
+                secString = "0" + secString
+            }
+            if (countString < 10) {
+                countString = "0" + countString
+            }
+
+
+
+
+            document.getElementById("hr").textContent = hrString
+            document.getElementById("min").textContent = minString
+            document.getElementById("sec").textContent = secString
+            document.getElementById("count").textContent = countString
+            console.log(count)
+            setTimeout("stopWatch()", 10)
+        }
+    }
+
+
+</script>
+
+</html>

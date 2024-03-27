@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Switcher</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* align-items: center; */
+        /* justify-content: center; */
+    }
+
+    h1 {
+        text-align: center;
+        text-decoration: underline;
+        /* padding-top: 1.5rem; */
+    }
+
+    img {
+        width: 700px;
+        height: 600px;
+        border: 2px solid yellow;
+        margin: 1rem 2rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+        text-align: justify;
+        padding: 1rem;
+    }
+
+    #list {
+        /* border: 2px solid yellow; */
+        text-align: right;
+        height: 50px;
+        padding: 1rem 2rem;
+    }
+
+    .box {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border: 2px solid red;
+        border-radius: 50%;
+        text-align: right;
+        cursor: pointer;
+    }
+
+    #white {
+        background-color: white;
+    }
+
+    #pink {
+        background-color: pink;
+    }
+
+    #gray {
+        background-color: gray;
+    }
+
+    #black {
+        background-color: black;
+    }
+</style>
+
+<body>
+    <div id="list">
+        <span class="box" id="white" onclick="colorBg('white')"></span>
+        <span class="box" id="pink" onclick="colorBg('pink')"></span>
+        <span class="box" id="gray" onclick="colorBg('gray')"></span>
+        <span class="box" id="black" onclick="colorBg('black')"></span>
+    </div>
+    <h1 class="text">About Us</h1>
+    <img src="./edward-howell-eWrJQFRhP88-unsplash.jpg" alt="error">
+    <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, error dicta eius repudiandae
+        voluptatibus maiores voluptatum est, saepe deserunt, adipisci atque soluta praesentium sapiente fugiat! Ut
+        distinctio assumenda atque deserunt id? Officia laboriosam sequi odit, incidunt ipsum illum quasi voluptatum
+        suscipit fuga sint excepturi sunt minus nihil et? Accusamus quibusdam id iure consectetur magnam aut hic eum
+        explicabo. Doloremque, minima nisi vitae tempore aliquid mollitia corporis quae animi, minus reiciendis beatae.
+        Cupiditate praesentium unde expedita consectetur numquam eveniet ad dolorum doloremque amet magni impedit vero
+        molestiae exercitationem pariatur ipsum temporibus aspernatur, saepe quasi quibusdam laudantium quidem
+        consequatur quod provident odit! Perferendis voluptas reiciendis consequuntur a minima sunt eveniet eum, natus
+        animi iusto optio voluptatum hic expedita ex aspernatur dolorum in cupiditate soluta ipsam nihil adipisci.
+        Perspiciatis sunt veniam temporibus nihil rerum. Reprehenderit et incidunt voluptates minus nostrum numquam
+        deleniti enim similique nobis natus? Fugit laudantium vero modi unde aspernatur magni veniam et, ex quis quos
+        ducimus itaque totam incidunt distinctio repellendus provident, corrupti nihil cupiditate perferendis omnis
+        nobis. Excepturi iusto id accusamus delectus, dignissimos consequatur, commodi a deserunt voluptatem dicta
+        eligendi reiciendis! Repellendus a accusamus voluptatibus nostrum labore suscipit iure rerum, laudantium
+        corrupti asperiores magnam dolorum incidunt, nesciunt dolor quam eaque error excepturi quos vitae est hic
+        laboriosam, praesentium molestiae. Quasi veniam distinctio modi eius, perferendis commodi! Ipsa nobis doloribus
+        consectetur numquam ipsam consequatur eum sequi laboriosam repellendus explicabo omnis distinctio est modi quam
+        id aut esse non libero laborum, error saepe beatae animi. Eaque culpa praesentium, itaque voluptate distinctio
+        sapiente aperiam eius blanditiis dolor nostrum quos autem consequatur impedit saepe commodi maxime a excepturi
+        ad rerum explicabo repellat officia veritatis possimus deserunt! Laudantium laborum, hic, rem ullam dolore quae
+        pariatur, dicta cupiditate incidunt exercitationem molestias debitis ipsa explicabo culpa ipsum eos tenetur
+        perferendis! Deleniti sunt expedita voluptatum fuga quo doloribus saepe cupiditate tenetur. Deserunt provident
+        nam eaque hic debitis sunt quia incidunt beatae reiciendis odio, corrupti saepe expedita ut, animi dicta quae
+        quaerat itaque recusandae pariatur minima eveniet nisi excepturi velit. Exercitationem, quod nulla quas
+        aspernatur quis accusantium debitis molestias recusandae reiciendis, dignissimos unde consectetur aperiam
+        distinctio? Error, earum, maiores quasi necessitatibus neque odit veniam ratione quod id magni deserunt possimus
+        debitis. Repellat sapiente maxime fugiat quod. Accusamus nam voluptatum repellat ipsam iure officia dolore saepe
+        corrupti voluptate voluptas, unde enim delectus quia beatae vero libero provident fugiat accusantium illum
+        neque. Laboriosam omnis quasi, porro animi iste quidem perferendis.</p>
+
+
+
+
+</body>
+<script>
+    let textElement = document.getElementsByClassName("text")
+    console.log(textElement)
+    function colorBg(color) {
+        document.body.style.backgroundColor = color
+        if (color == "black") {
+            //  console.log("hr")
+            for (let element of textElement) {
+                element.style.color = "white"
+                // console.log("hi")
+            }
+        } else {
+            for (let element of textElement) {
+                element.style.color = "black"
+
+            }
+
+        }
+    }
+</script>
+
+</html>

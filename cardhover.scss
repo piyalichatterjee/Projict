@@ -30,6 +30,7 @@ body {
   background-size: cover;
   &:hover {
     transform: translateY(30px);
+    transition: 1s ease-in-out;
   }
 }
 .card:hover {
@@ -46,7 +47,7 @@ body {
   opacity: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   align-items: baseline;
   background: linear-gradient(
     rgba(0, 100, 100, 0.882),
@@ -56,6 +57,7 @@ body {
 .text:hover {
   // overflow: hidden;
   opacity: 1;
+  transition: 1s ease-in-out;
   // height: 100%;
 }
 
@@ -65,10 +67,10 @@ body {
 }
 .card h1,
 p {
-  margin: 10px;
+  margin: 5px;
 }
 .card button {
-  margin: 10px;
+  margin: 20px;
   padding: 5px 10px;
   border: none;
   font-weight: bold;

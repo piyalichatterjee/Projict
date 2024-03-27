@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,k initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image {
+        padding: 1rem;
+        margin: 1rem;
+        /* border: 2px solid yellow; */
+    }
+
+    #navber {
+        /* display: flex; */
+        width: 100%;
+        /* border: 2px solid red; */
+    }
+
+    #navber ul {
+        background-color: rgb(8, 91, 94);
+        display: flex;
+        list-style: none;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #navber li {
+        padding: 10px;
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .box h1 {
+        margin: 2rem;
+    }
+
+    .box p {
+        text-align: justify;
+        font-size: 1rem;
+        margin: 2rem;
+    }
+
+    .sticky {
+        position: fixed;
+        /* position: sticky; */
+        top: 0;
+        width: 100%;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="image">
+            <img src="./edward-howell-eWrJQFRhP88-unsplash.jpg" alt="error" width="100px">
+        </div>
+        <nav id="navber">
+            <ul id="list">
+                <li>Home</li>
+                <li>About Us</li>
+                <li> Our Trem</li>
+                <li>Client</li>
+                <li>Contact Us</li>
+            </ul>
+        </nav>
+        <div class="box">
+            <h1>About Us</h1>
+            <img src="./megan-gesler-yH9J4n_G5fI-unsplash.jpg" alt="error" width="600px">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ullam tenetur vel quos itaque saepe.
+                Magni suscipit quisquam enim praesentium eos, cum repudiandae facilis consectetur optio, nisi ea
+                mollitia exercitationem repellendus, provident illum ut pariatur id dolor? Expedita, eos rem tempore
+                excepturi perspiciatis sapiente fugit amet distinctio at tenetur pariatur itaque similique soluta
+                exercitationem laboriosam error recusandae magni reiciendis voluptatum? Blanditiis incidunt odit illo
+                deserunt odio quos quibusdam quod ea iure a delectus dolor, eaque ad. Cumque placeat deserunt saepe
+                adipisci quidem eaque quae dolorum voluptatum, nemo inventore odit maxime harum aut quaerat, nesciunt
+                temporibus! Numquam, error delectus! Asperiores, itaque. Obcaecati sit nam tempora sapiente quam
+                deleniti magni cumque veniam quibusdam dolores? Autem, laboriosam? Dolorem adipisci hic ipsum nihil esse
+                natus, placeat sed ex! Deserunt dolore excepturi cupiditate iste beatae maxime officiis explicabo
+                incidunt autem a? Corrupti qui et earum accusamus cumque in sunt porro at iusto. Repellat, error animi
+                ratione non facere ipsa maxime doloremque quos cum consectetur nihil hic suscipit inventore corrupti
+                dolores, sequi repudiandae, architecto eligendi qui labore expedita! Fugiat, eum non, dolor numquam
+                consectetur accusamus blanditiis eaque quaerat itaque hic consequatur modi architecto. Molestiae, iusto
+                est hic fuga facere dolore amet eum commodi nam sapiente error non molestias id odit cum nostrum quasi
+                ad autem? Est fuga voluptatem recusandae quam non nihil cumque, delectus sed voluptatibus? Animi nemo
+                officia dignissimos similique deleniti ab ipsum voluptatibus. Ut, praesentium maxime? Maxime vitae
+                distinctio porro facere accusantium ipsam iste! In, praesentium? Vel aliquam corrupti mollitia iste
+                neque delectus quia veritatis maiores fugiat asperiores? Illo, ducimus, mollitia iste corporis
+                asperiores ex quae expedita rerum doloribus quas velit! Dolorum fugiat ab voluptatum, beatae veritatis
+                laborum error culpa similique modi velit ipsum assumenda vero nostrum esse quibusdam reiciendis atque
+                sapiente quam qui quo ratione eius odit. Dolorum est nam sed modi maiores aliquid enim alias ea nulla
+                magnam quo suscipit dolor repellat architecto distinctio voluptatem cumque a rem sint odit velit
+                officiis doloremque, cupiditate hic? Hic corrupti dicta illo esse et eligendi ipsa vero, non adipisci,
+                officia nam odio iusto assumenda earum, omnis rem perferendis! Blanditiis explicabo in distinctio a ab
+                magni corporis accusamus eligendi adipisci, ut quam inventore non quis totam voluptas illum expedita
+                maxime consectetur. Odit, accusamus optio ab unde itaque quas iure, voluptatem molestiae qui est harum.
+                Cum est, sit illum voluptate aut sequi pariatur ipsum praesentium repudiandae hic vitae dolores dicta
+                iure illo iste, exercitationem ad? Omnis, totam.
+            </p>
+        </div>
+    </div>
+</body>
+<script>
+    let list = document.getElementById("list")
+    console.log(list)
+
+    window.addEventListener("scroll", function () {
+        if (window.pageYOffset >= 300) {
+            list.classList.add("sticky")
+            // console.log("hi")
+        }
+        else {
+            list.classList.remove("sticky")
+        }
+    })
+</script>
+
+</html>

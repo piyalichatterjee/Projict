@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(3, 92, 92);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box {
+            background-color: aliceblue;
+            height: 300px;
+            width: 300px;
+
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        form {
+            /* border: 2px solid red; */
+            margin: 30px;
+
+        }
+
+        input {
+            margin: 10px;
+            padding: 10px 30px;
+            width: 60%;
+            outline: none;
+        }
+
+        .error {
+            /* border: 2px solid red; */
+            /* text-align: left; */
+            margin: 0 10px;
+            color: red;
+        }
+
+        .submit {
+            background-color: rgb(3, 92, 92);
+            border: none;
+            width: 85%;
+            /* margin:10px 10px; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>Login</h1>
+        <form action="" onsubmit="return formSubmit()">
+            <input type="text" placeholder="UserName" id="username">
+            <p id="usererror" class="error"> </p>
+            <input type="password" placeholder="Password" id="password">
+            <p id="passworderror" class="error"></p>
+            <input type="submit" class="submit">
+        </form>
+    </div>
+</body>
+<script>
+    let username = document.getElementById("username")
+    console.log(username)
+    let password = document.getElementById("password")
+    console.log(password)
+    let check = true
+
+    function formSubmit() {
+        if (username.value == "") {
+            //  console.log("hi")
+            document.getElementById("usererror").textContent = "Username is empty"
+            check = false
+        }
+        else if (username.value.length < 4) {
+            document.getElementById("usererror").textContent = "Username has to be more than 4"
+            check = false
+        } else {
+            document.getElementById("usererror").textContent = " "
+            check = true
+        }
+        if (password.value == "") {
+            document.getElementById("passworderror").textContent = "Password is empty"
+            check = false
+        } else {
+            document.getElementById("passworderror").textContent = ""
+            check = true
+        }
+        if (check) {
+            return true
+        }
+        else {
+            // console.log("po")
+            return false
+
+        }
+
+    }
+</script>
+
+</html>
