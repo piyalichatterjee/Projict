@@ -113,20 +113,145 @@
     // location.reload()  //page ke reload kore//
 // })
 //  topic-4-Navigator Object//
-console.log(navigator.appName)
-console.log(navigator.appVersion)
-console.log(navigator.appCodeName)
-console.log(navigator.cookieEnabled)
-console.log(navigator.userAgent)
-console.log(navigator.platform)
-console.log(navigator.javaEnabled()) //method//
+// console.log(navigator.appName)
+// console.log(navigator.appVersion)
+// console.log(navigator.appCodeName)
+// console.log(navigator.cookieEnabled)
+// console.log(navigator.userAgent)
+// console.log(navigator.platform)
+// console.log(navigator.javaEnabled()) //method//
 
 
 // topic-5 Screen Object//
-console.log(screen.width)
-console.log(screen.height)
-console.log(screen.colorDepth)
-console.log(screen.orientation)
+// console.log(screen.width)
+// console.log(screen.height)
+// console.log(screen.colorDepth)
+// console.log(screen.orientation)
+
+// Video-81 rest parameters//
+// function sum (a,b){
+//     console.log(a+b)
+// }
+// sum(2,5)
+
+// function sum(...num){
+
+//     let result=0
+//     for(let i=0;i<num.length;i++){
+//       result +=num[i]
+//     }
+//     console.log(result)
+
+// }
+// sum(4,8,6)
+
+
+// Video-82 Spread Operator//
+// let array1=[4,5,3]
+// let array2=[2,6,9,...array1]     
+// let array2=[...array1,2,6,9]
+// let array2=[2,6,...array1,9]
+// let array2=[2,6,7]
+// let array3=[...array1,...array2]
+// console.log(array2)
+// console.log(array3)
+
+// video-83 For of Loop//
+
+// let num=[412,678,796,364,456]
+// for(let y of num){
+//     console.log(y)
+// }
+// let text=["piyali","puja"]
+// for(let x of text){
+//     console.log(x)
+// }
+
+// Video-83 Template Literals   //    ES-6 prothom eseche
+
+// let srt=`hello \n world`      //lekha ta niche nemejabe//
+// console.log(srt)
+
+// let srt=`hello
+
+
+
+// world  
+
+// thank you
+// `
+
+// console.log(srt)         //multiple line kora jay//
+
+// let name="Piyali"
+// console.log(`My name is ${name}`)
+
+// let num=20
+// console.log(`My age is ${num*2}`)
+
+// Video-85 Array Destructuring //
+// let book =["piyali",,58,"abhradip",74]     //age undefined
+// let book =["piyali",,58,"abhradip",74]
+// let [name, age, text,test,num]=book      //undefined
+// let [name, age, text,test]=book
+// let [name, age=52, text,test]=book    //jokhon upore kon age r value deoya nei tokhn =diye default value deo jay.kintu upore value thakle default value kaj korbe na //
+// console.log(age)
+
+//  let number=["piyali",45,"abhradip",74,["puja",52]]   // nesed array(inner array)//
+// let [name,age,text,test,[value,marks]]=number
+// console.log(marks)
+
+// function num(){
+//     return "piyali"
+
+// }
+// let name=num()
+// console.log(name)
+// function name(){                          //function array return korle array destructuring hoy//
+//     return ["box",45,"text"]
+// }
+// let [value,age,page]=name()
+// console.log(value)
+// console.log(value ,age,page)
+
+// video-86 Object Destructuring//
+
+// let book={                    //normal Object//
+//     name:"Piyali",
+//     page:211,
+//     price:45
+// }
+// let text=book.name
+// console.log(text)
+
+// let book={                    //normal Object//
+//     name:"Piyali",
+//     page:211,
+//     price:45
+// }
+//  let {name,page,price}=book       // upore  ja property r name diyeci seiguloi dite hobe //        object destructuring
+// console.log(page)
+// let {name: title,page,price}=book    // variable change kora holo//
+//console.log(title)//                // kon variable r name change korbo seta likhe : diye notun variable likhte hobe//
+
+//let {name: title,page,price="200"}=book      //default value added//
+//console.log(price)//
+
+let book={                    //nested Object//
+    name:"Piyali",
+    page:211,
+    price:45,
+publication:{
+     pubName:"techgun",
+     year:2014
+}
+
+}
+let {name,page,price,publication:{pubName,year}}=book
+console.log(pubName)
+
+
+
 
 
 </script>
