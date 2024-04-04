@@ -47,63 +47,63 @@
 
     // button2.addEventListener("click", function () {
     //     window.open("https://www.yahoo.com","zomato")
-        
-        
+
+
     // })
     // // button3.addEventListener("click",function(){
     //     console.log(win)
     //         win.close()
     // })
 
-//topic-2 setTimeout & setInterval//
-//1. let a=100
-// let time=setTimeout(myfuntion,5000)      //1bar execute//
+    //topic-2 setTimeout & setInterval//
+    //1. let a=100
+    // let time=setTimeout(myfuntion,5000)      //1bar execute//
 
-// function myfuntion(){
-//     a++
-//     console.log(a)
-// }
-// clearTimeout(time)
+    // function myfuntion(){
+    //     a++
+    //     console.log(a)
+    // }
+    // clearTimeout(time)
 
 
-//2. let text=100
-// let stop=setInterval(function(){
-//     text--
-//     console.log(text)
-//     if(text===98){
-//         console.log("finish")
-//         test()
-//     }
-// },3000)
+    //2. let text=100
+    // let stop=setInterval(function(){
+    //     text--
+    //     console.log(text)
+    //     if(text===98){
+    //         console.log("finish")
+    //         test()
+    //     }
+    // },3000)
 
-// function test(){
-//     clearInterval(stop)
+    // function test(){
+    //     clearInterval(stop)
 
-// }
+    // }
 
-//3. let text =100
-// let stopInterval=setInterval(fun,3000)
+    //3. let text =100
+    // let stopInterval=setInterval(fun,3000)
 
-// function fun(){
-//     text++
-//     console.log(text)
-//     if(text===105){
-//         console.log("end")
-//         stop()
-//     }
-// }
-// let stop=()=>{
-//     clearInterval(stopInterval)
-// }
-//  topic-3  Location object //
+    // function fun(){
+    //     text++
+    //     console.log(text)
+    //     if(text===105){
+    //         console.log("end")
+    //         stop()
+    //     }
+    // }
+    // let stop=()=>{
+    //     clearInterval(stopInterval)
+    // }
+    //  topic-3  Location object //
 
-// console.log(location.href)
-// console.log(location.pathname)      //property//
-// console.log(location.protocol)
+    // console.log(location.href)
+    // console.log(location.pathname)      //property//
+    // console.log(location.protocol)
 
-// let button=document.getElementById("btn")
-// console.log(button)
-// button.addEventListener("click",()=>{
+    // let button=document.getElementById("btn")
+    // console.log(button)
+    // button.addEventListener("click",()=>{
     // window.location="https://www.zomato.com/india"
     // location.href="https://www.zomato.com/india"    //Method//
     // location.assign("https://www.zomato.com/india")    //eigulo history te thake mne hoy egulo ke abr back o kora jay//
@@ -111,148 +111,345 @@
     // location.replace("https://www.zomato.com/india") //eita ar history te theke na mane eita back kora jay na//
 
     // location.reload()  //page ke reload kore//
+    // })
+    //  topic-4-Navigator Object//
+    // console.log(navigator.appName)
+    // console.log(navigator.appVersion)
+    // console.log(navigator.appCodeName)
+    // console.log(navigator.cookieEnabled)
+    // console.log(navigator.userAgent)
+    // console.log(navigator.platform)
+    // console.log(navigator.javaEnabled()) //method//
+
+
+    // topic-5 Screen Object//
+    // console.log(screen.width)
+    // console.log(screen.height)
+    // console.log(screen.colorDepth)
+    // console.log(screen.orientation)
+
+    // Video-81 rest parameters//
+    // function sum (a,b){
+    //     console.log(a+b)
+    // }
+    // sum(2,5)
+
+    // function sum(...num){
+
+    //     let result=0
+    //     for(let i=0;i<num.length;i++){
+    //       result +=num[i]
+    //     }
+    //     console.log(result)
+
+    // }
+    // sum(4,8,6)
+
+
+    // Video-82 Spread Operator//
+    // let array1=[4,5,3]
+    // let array2=[2,6,9,...array1]     
+    // let array2=[...array1,2,6,9]
+    // let array2=[2,6,...array1,9]
+    // let array2=[2,6,7]
+    // let array3=[...array1,...array2]
+    // console.log(array2)
+    // console.log(array3)
+
+    // video-83 For of Loop//
+
+    // let num=[412,678,796,364,456]
+    // for(let y of num){
+    //     console.log(y)
+    // }
+    // let text=["piyali","puja"]
+    // for(let x of text){
+    //     console.log(x)
+    // }
+
+    // Video-83 Template Literals   //    ES-6 prothom eseche
+
+    // let srt=`hello \n world`      //lekha ta niche nemejabe//
+    // console.log(srt)
+
+    // let srt=`hello
+
+
+
+    // world  
+
+    // thank you
+    // `
+
+    // console.log(srt)         //multiple line kora jay//
+
+    // let name="Piyali"
+    // console.log(`My name is ${name}`)
+
+    // let num=20
+    // console.log(`My age is ${num*2}`)
+
+    // Video-85 Array Destructuring //
+    // let book =["piyali",,58,"abhradip",74]     //age undefined
+    // let book =["piyali",,58,"abhradip",74]
+    // let [name, age, text,test,num]=book      //undefined
+    // let [name, age, text,test]=book
+    // let [name, age=52, text,test]=book    //jokhon upore kon age r value deoya nei tokhn =diye default value deo jay.kintu upore value thakle default value kaj korbe na //
+    // console.log(age)
+
+    //  let number=["piyali",45,"abhradip",74,["puja",52]]   // nesed array(inner array)//
+    // let [name,age,text,test,[value,marks]]=number
+    // console.log(marks)
+
+    // function num(){
+    //     return "piyali"
+
+    // }
+    // let name=num()
+    // console.log(name)
+    // function name(){                          //function array return korle array destructuring hoy//
+    //     return ["box",45,"text"]
+    // }
+    // let [value,age,page]=name()
+    // console.log(value)
+    // console.log(value ,age,page)
+
+    // video-86 Object Destructuring//
+
+    // let book={                    //normal Object//
+    //     name:"Piyali",
+    //     page:211,
+    //     price:45
+    // }
+    // let text=book.name
+    // console.log(text)
+
+    // let book={                    //normal Object//
+    //     name:"Piyali",
+    //     page:211,
+    //     price:45
+    // }
+    //  let {name,page,price}=book       // upore  ja property r name diyeci seiguloi dite hobe //        object destructuring
+    // console.log(page)
+    // let {name: title,page,price}=book    // variable change kora holo//
+    //console.log(title)//                // kon variable r name change korbo seta likhe : diye notun variable likhte hobe//
+
+    //let {name: title,page,price="200"}=book      //default value added//
+    //console.log(price)//
+
+    // let book={                    //nested Object//
+    //     name:"Piyali",
+    //     page:211,
+    //     price:45,
+    // publication:{
+    //      pubName:"techgun",
+    //      year:2014
+    // }
+
+    // }
+    // let {name,page,price,publication:{pubName,year}}=book
+    // console.log(pubName)
+
+    // video-93 Arraw Function//
+    // Arraw function besi bebohar kora hoy setTimeout,react.js eisobe te //
+
+
+
+    // function sum(a, b) {              //normal function//
+    //     return a * b
+    // }
+    // console.log(sum(4, 5))
+
+    // let sumA =(a,b)=>{                  //Arrow function//
+    //     return a-b
+    // }
+    // console.log(sumA(5,3))
+
+
+    // let sumA = (a, b) => a - b                 //eita kora hoy jokhn amra ek line te kichu kori tokhon.onek line hole eita kora jbena//
+    // console.log(sumA(10, 6))
+
+
+    // function double(a) {               //normal function//
+    //     return 2 * a
+    // }
+    // console.log(double(8))             
+
+    // let doubleA = a => 2 * a         //Array function one line//    
+    // console.log(doubleA(10))
+
+
+    // let random=()=>{
+    //      return Math.random()               // Arrow function//
+    // }
+    // console.log(random())
+
+    //  document.addEventListener("click",()=>{     //Arrow function//
+    //     // console.log("clicked...")
+    // })
+
+    // document.addEventListener("click",()=>console.log("clicked.."))   //One line   Arrow function//
+
+    // Video-94 Callback//
+
+    // function sayHello(){
+    //     console.log("hello")
+    // }
+    // function sayHi(){
+    //     console.log("hi")
+    // }
+
+    // function add(num1,num2,Callback){     //  eki Callback variable r modhe diye duto function pass kora jay//
+
+    //     console.log(num1 +num2)
+    //     Callback()
+    // }
+
+    // let a=10
+    // let b=20
+
+    // add(a,b,sayHello)
+    // add(52,25,sayHi)
+
+    // add (30,6,function(){           //anonymous function koreo amra callback variable r modhe diyeo amra function pass korate pari//
+    //     console.log("bye..")
+    // })
+
+
+    // video-95   Map Function//
+
+    // let arr = [4, 9, 6, 3]
+    // let arr1 = arr.map((val) => {
+    //     return val * 5
+    // })
+    // console.log(arr1)
+
+
+    //video-96 Filter Function//
+
+
+    // let num = [2, 8, 9, 7, 6, 52, 67, 34, 45, 2, 4, 55]
+    // let num1 = num.filter((val) => {
+    //     return val > 50
+    // })
+    // console.log(num1)
+
+    // let team = [
+    //     {
+    //         name: "Piyali Chatterjee",
+    //         age: 22
+    //     },
+    //     {
+    //         name: "Pubali Chatterjee",
+    //         age: 23
+    //     },
+    //     {
+    //         name: "kuheli Chatterjee",
+    //         age: 26
+    //     },
+    //     {
+    //         name: "Abhradip Paul",
+    //         age: 21
+    //     },
+
+    // ]
+
+    // let text = team.filter((val) => {
+        // return val.name.includes("Chatterjee")
+        // return val.name=="Abhradip Paul"
+        // return val.age > 22
+    // })
+    // console.log(text)
+
+// video-97 Cookies//
+
+// document.cookie="item=rice;"
+// // document.cookie="item=rice;expires=sat,30 Mar 2024 12:00:00 UTC"
+// document.cookie="location=India"
+
+// // document.cookie="item=milk;"
+
+
+// let x=document.cookie
+// console.log(x)
+
+// Video-98 Local storage and Session storage//
+
+// localStorage.setItem("Name","Piyali")
+// localStorage.setItem("Location","Serampore")
+// localStorage.setItem("item","milk")
+// console.log(localStorage.getItem("Name"))
+// localStorage.removeItem("item")
+
+
+// sessionStorage.setItem("first Name","priya")
+// sessionStorage.setItem("location","Mahesh")
+// console.log(sessionStorage.getItem("location"))
+// sessionStorage.removeItem("location")
+
+// video-101 JOSON(Javasctript Object Notation) Data//
+
+// let data=fetch("https://api.github.com/users/abhradippaul")
+// let data1=`{
+//     "login": "mojombo",
+//     "id": 1,
+//     "node_id": "MDQ6VXNlcjE=",
+//     "avatar_url": "https://avatars.githubusercontent.com/u/1?v=4",
+//     "gravatar_id": "",
+//     "url": "https://api.github.com/users/mojombo",
+//     "html_url": "https://github.com/mojombo",
+//     "followers_url": "https://api.github.com/users/mojombo/followers",
+//     "following_url": "https://api.github.com/users/mojombo/following{/other_user}",
+//     "gists_url": "https://api.github.com/users/mojombo/gists{/gist_id}",
+//     "starred_url": "https://api.github.com/users/mojombo/starred{/owner}{/repo}",
+//     "subscriptions_url": "https://api.github.com/users/mojombo/subscriptions",
+//     "organizations_url": "https://api.github.com/users/mojombo/orgs",
+//     "repos_url": "https://api.github.com/users/mojombo/repos",
+//     "events_url": "https://api.github.com/users/mojombo/events{/privacy}",
+//     "received_events_url": "https://api.github.com/users/mojombo/received_events",
+//     "type": "User",
+//     "site_admin": false
+//   }`
+// let dobject=JSON.parse(data1)    //eita korle javasctript object toiri hoy//
+// // console.log(dobject.id)
+// // console.log(dobject["login"])
+
+
+// // video-102 how to create json string in javascript?//
+// // eita Object theke json kore dey
+// let student={
+//     name:"Piyali",
+//     age:22,
+//     location:"Serampore"
+// }
+// let jsonObject=JSON.stringify(student)
+// console.log(jsonObject)
+
+
+
+// let arr1=[1,5,3,8]
+// let arr2=arr1.map((e)=>{
+//      return   e*4
 // })
-//  topic-4-Navigator Object//
-// console.log(navigator.appName)
-// console.log(navigator.appVersion)
-// console.log(navigator.appCodeName)
-// console.log(navigator.cookieEnabled)
-// console.log(navigator.userAgent)
-// console.log(navigator.platform)
-// console.log(navigator.javaEnabled()) //method//
+// console.log(arr2)
+// let arr1=[1,5,3,8]           //hoyni//
+// let arr2=arr1.filter((e)=>{
+//      return   e*4
+// })
+// console.log(arr2)
 
-
-// topic-5 Screen Object//
-// console.log(screen.width)
-// console.log(screen.height)
-// console.log(screen.colorDepth)
-// console.log(screen.orientation)
-
-// Video-81 rest parameters//
-// function sum (a,b){
-//     console.log(a+b)
-// }
-// sum(2,5)
-
-// function sum(...num){
-
-//     let result=0
-//     for(let i=0;i<num.length;i++){
-//       result +=num[i]
-//     }
-//     console.log(result)
-
-// }
-// sum(4,8,6)
-
-
-// Video-82 Spread Operator//
-// let array1=[4,5,3]
-// let array2=[2,6,9,...array1]     
-// let array2=[...array1,2,6,9]
-// let array2=[2,6,...array1,9]
-// let array2=[2,6,7]
-// let array3=[...array1,...array2]
-// console.log(array2)
-// console.log(array3)
-
-// video-83 For of Loop//
-
-// let num=[412,678,796,364,456]
-// for(let y of num){
-//     console.log(y)
-// }
-// let text=["piyali","puja"]
-// for(let x of text){
-//     console.log(x)
-// }
-
-// Video-83 Template Literals   //    ES-6 prothom eseche
-
-// let srt=`hello \n world`      //lekha ta niche nemejabe//
-// console.log(srt)
-
-// let srt=`hello
-
-
-
-// world  
-
-// thank you
-// `
-
-// console.log(srt)         //multiple line kora jay//
-
-// let name="Piyali"
-// console.log(`My name is ${name}`)
-
-// let num=20
-// console.log(`My age is ${num*2}`)
-
-// Video-85 Array Destructuring //
-// let book =["piyali",,58,"abhradip",74]     //age undefined
-// let book =["piyali",,58,"abhradip",74]
-// let [name, age, text,test,num]=book      //undefined
-// let [name, age, text,test]=book
-// let [name, age=52, text,test]=book    //jokhon upore kon age r value deoya nei tokhn =diye default value deo jay.kintu upore value thakle default value kaj korbe na //
-// console.log(age)
-
-//  let number=["piyali",45,"abhradip",74,["puja",52]]   // nesed array(inner array)//
-// let [name,age,text,test,[value,marks]]=number
-// console.log(marks)
-
-// function num(){
-//     return "piyali"
-
-// }
-// let name=num()
-// console.log(name)
-// function name(){                          //function array return korle array destructuring hoy//
-//     return ["box",45,"text"]
-// }
-// let [value,age,page]=name()
-// console.log(value)
-// console.log(value ,age,page)
-
-// video-86 Object Destructuring//
-
-// let book={                    //normal Object//
-//     name:"Piyali",
-//     page:211,
-//     price:45
-// }
-// let text=book.name
-// console.log(text)
-
-// let book={                    //normal Object//
-//     name:"Piyali",
-//     page:211,
-//     price:45
-// }
-//  let {name,page,price}=book       // upore  ja property r name diyeci seiguloi dite hobe //        object destructuring
-// console.log(page)
-// let {name: title,page,price}=book    // variable change kora holo//
-//console.log(title)//                // kon variable r name change korbo seta likhe : diye notun variable likhte hobe//
-
-//let {name: title,page,price="200"}=book      //default value added//
-//console.log(price)//
-
-let book={                    //nested Object//
-    name:"Piyali",
-    page:211,
-    price:45,
-publication:{
-     pubName:"techgun",
-     year:2014
-}
-
-}
-let {name,page,price,publication:{pubName,year}}=book
-console.log(pubName)
-
+// let arr1=[1,5,3,8]
+// let arr2=arr1.filter((e)=>{
+//      return   e>4
+// })
+// console.log(arr2)
+// let arr1=[1,5,3,8]
+// let arr2=arr1.map((e)=>{
+//      return   e>4
+// })
+// console.log(arr2)
 
 
 
 
 </script>
-

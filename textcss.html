@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+/* .container{
+    
+    display: block;
+    width: 230px;
+    margin: auto;
+}
+
+
+input{
+    display: block;
+}
+input[type="text"]{
+background-color: red;
+}
+a[target]{
+font-size: 2rem;
+color: aquamarine;
+}
+a[target="_self"]{
+font-size: 2rem;
+color: green;
+} */
+/* li:nth-child(4){
+ /* color: blue;         4 no ta blue hbe */
+
+/* } */
+/* li:nth-child(2n+0){ */
+ /* color:red;         2to no r por por red hoche */
+
+/* } */
+/* li:nth-child(3n+3){           3,n=0,3[3,3+3=6,3+6=9]ei gulo color hobe */
+ /* color:red;          */
+
+/* } */
+/* li:nth-child(odd){ */
+  /* background-color:red;          odd no te hbe color */
+
+/* } */
+/* li:nth-child(even){ */
+  /* background-color:green;         even no te color hobe */
+
+/* }  */
+
+:root{
+   --primary-color:blue;
+   --danger-color:red;
+    --box-color:pink;
+    --maxW:500px
+}
+.container{
+align-items: center;
+justify-content: center;
+    display: flex;
+    background-color:var(--box-color) ;
+    max-width: var(--maxW);
+    background-color: var(--danger-color);
+}
+.box{
+    width: 200px;
+    height: 200px;
+    background-color:var(--primary-color);
+    border: 2px solid var(--danger-color);
+    margin: 2px 10px;
+    box-shadow: 10px 10px 10px var(--primary-color);
+}
+
+</style>
+<body>
+<!--1... Attribute &nth Child pseudo Selectors     -->
+<!-- Attribute -->
+<!-- <div class="container">
+<h1><a href="http://google.com"target="_blank" >Go to google</a></h1>
+<h1><a href="http://facebook.com"target="_self" >Go to facebook</a></h1>
+<form action="" class="form-control">
+    <input type="text" placeholder="Enter your name">
+    <input type="password" placeholder="Enter your password">
+    <input type="submit" value="submit">
+</form> -->
+
+<!-- nth Child pseudo Selectors -->
+<!-- <ul>
+    <li class="item" id="item-1">Item1</li>
+    <li class="item" id="item-2">Item2</li>
+    <li class="item" id="item-3">Item3</li>
+    <li class="item" id="item-4">Item4</li>
+    <li class="item" id="item-5">Item5</li>
+    <li class="item" id="item-6">Item6</li>
+    <li class="item" id="item-7">Item7</li>
+    <li class="item" id="item-8">Item8</li>
+    <li class="item" id="item-9">Item9</li>
+    <li class="item" id="item-10">Item10</li>
+    
+</ul>
+</div> -->
+
+
+<!-- Variables & Custom Properties -->
+
+<div class="container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+
+</body>
+</html>
